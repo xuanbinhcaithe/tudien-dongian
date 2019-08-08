@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>từ điển đơn giản</title>
+</head>
+<body>
+    <input type="text" id="inputtext"><br>
+    <input type="button" onclick="search()" value="search"><br>
+    <p id="result"></p>
+
+    <script>
+        let engLish=['hello' ,'car','sport','chiken','mouse','cat','dog'];
+        let vietNam=['xin chao','ô tô','thể thao','gà','chuột','mèo','chó'];
+
+
+        function search() {
+            let dauVao=document.getElementById("inputtext").value;
+            for (let i=0;i<engLish.length;i++) {
+                if (dauVao == engLish[i]) {
+                    document.getElementById("result").innerHTML = vietNam[i];
+                    break;
+                    } else {
+                    document.getElementById("result").innerHTML = "khong co";
+                    }
+                }
+
+
+            }
+
+
+    </script>
+
+</body>
+</html>
